@@ -1,10 +1,23 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 16px; /* 1rem = 16px */
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #000;
+}
+.container {
+  max-width: 90rem; /* 1440px  from figma*/
+  margin: 0 9.375rem; /* 150px from figma*/
+  padding: 0 9.375rem; /* 150px from figma*/
 }
 
 /*Header Styles*/
@@ -14,9 +27,6 @@ body {
   padding: 1rem 0;
 }
 .main-header .container {
-  max-width: 90rem; /* 1440px  from figma*/
-  margin: 0 auto;
-  padding: 0 9.375rem; /* 150px from figma*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +41,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gab: 2rem;
+  gap: 2rem;
 }
 .main-header .nav-links li {
   margin-right: 1rem;
@@ -52,4 +62,231 @@ body {
   color: white;
   font-weight: bold;
   text-decoration: none;
+}
+
+/*Hero Styles*/
+
+.hero-section {
+  background-image: url("images/a1.jpg");
+  background-size: cover;
+  background-position: center;
+  /* display: flex; */
+  color: white;
+  position: relative;
+  /* padding-top: 9.6875rem; */
+  /* 155px  from figma*/
+  min-height: 100vh;
+}
+
+.hero-section .container {
+  max-width: 90rem;
+  margin: 0 9.375rem;
+  padding: 0 9.375rem;
+}
+
+.indicator {
+  position: absolute;
+  top: 9.6875rem; /* 155px */
+  left: 9.6875rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.indicator .progress-line {
+  width: 10rem;
+  height: 0.125rem;
+  background-color: gray;
+  position: relative;
+}
+
+.indicator .progress-line::before {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  width: 4rem;
+  background-color: white;
+  top: -0.0625rem;
+  left: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 16.3125rem; /* 261px */
+  left: 9.375rem; /* 150px */
+  max-width: 45.5625rem; /* 729px */
+  height: 19.0625rem; /* 305px */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  opacity: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  color: #e1f1ee;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 2.125rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6.8125rem; /* 109px */
+  text-decoration: none;
+  display: inline-block;
+  height: 2.5625rem; /* 41px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.green {
+  background-color: #3cab90;
+  color: white;
+}
+
+.btn.yellow {
+  background-color: #ffbb1c;
+  color: black;
+}
+
+/* === Friendliest Installers Section === */
+
+.installers-section {
+  padding: 5rem;
+  background-color: #ffffff;
+}
+
+.installers-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* === Text Area === */
+.installers-section .text {
+  flex: 1;
+  max-width: 40rem;
+}
+
+.installers-section .text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b0b1f;
+  margin-bottom: 1.5rem;
+}
+
+.installers-section .text p {
+  font-size: 1.125rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* === Features List === */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #0b0b1f;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.features-list .num {
+  color: #8cc63f;
+  font-weight: bold;
+}
+
+/* === Image Area === */
+.image {
+  flex: 1;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* === Yellow Box Over Image === */
+.yellow-box {
+  position: absolute;
+  bottom: 2rem;
+  left: -2rem;
+  background-color: #ffbb1c;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  text-align: center; */
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.yellow-box img {
+  align-items: flex-start;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.yellow-box p {
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* === Green Power Section === */
+.green-power-section {
+  background: linear-gradient(135deg, #c3f1c1, #b2e5d2);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.green-power-section .container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.green-power-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b0b1f;
+  margin-bottom: 1.5rem;
+}
+
+.green-power-section p {
+  font-size: 1.125rem;
+  color: #333;
+  max-width: 40rem;
+  margin: 0 auto;
+  line-height: 1.6;
 }
