@@ -386,3 +386,49 @@ body {
     font-size: 0.5rem;
   }
 }
+
+/* === Responsive: Tablet === */
+@media (max-width: 1024px) {
+  /* Container */
+  .container {
+    padding: 0 3rem;
+  }
+
+  /* Header */
+  .main-header .container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: auto;
+  }
+
+  .nav-links ul {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    left: 3rem;
+    right: 3rem;
+    top: 12rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  /* Installers Section */
+  .installers-section .container {
+    gap: 2rem;
+  }
+
+  .installers-section .text h2 {
+    font-size: 1.75rem;
+  }
+
+  .yellow-box {
+    width: 100%;
+    left: auto;
+    right: auto;
+  }
+}
