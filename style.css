@@ -356,7 +356,7 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .hero-buttons {
@@ -374,12 +374,15 @@ body {
     gap: 2rem;
   }
   .installers-section .text h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .yellow-box {
     position: static;
-    width: auto;
+    width: 100%;
     margin-top: 1rem;
+  }
+  .yellow-box p {
+    font-size: 0.5rem;
   }
 }
