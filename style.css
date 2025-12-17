@@ -12,12 +12,44 @@ html {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  font-size: 1rem;
   color: #000;
 }
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 9.375rem; /* 150px from figma*/
+}
+
+h1 {
+  font-size: 2.75rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.125rem;
+  color: #444;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6.8rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
 }
 
 /*Header Styles*/
@@ -63,6 +95,7 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+
 /*=== Hamburger Menu Styles === */
 .hamburger {
   display: none;
@@ -153,17 +186,9 @@ body {
   gap: 1.5rem;
 }
 
-.btn {
-  padding: 0.75rem 2.125rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 6.8125rem; /* 109px */
-  text-decoration: none;
-  display: inline-block;
+.hero-content .btn {
   height: 2.5625rem; /* 41px */
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn.green {
@@ -171,9 +196,17 @@ body {
   color: white;
 }
 
+.btn.green:hover {
+  background-color: #349c82;
+}
+
 .btn.yellow {
   background-color: #ffbb1c;
   color: black;
+}
+
+.btn.yellow:hover {
+  background-color: #e6a800;
 }
 
 /* === Friendliest Installers Section === */
@@ -316,6 +349,25 @@ body {
     padding: 0 1.5rem;
   }
 
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+
   /* Header Adjustments */
   .main-header .container {
     flex-direction: column;
@@ -387,11 +439,28 @@ body {
   }
 }
 
-/* === Responsive: Tablet === */
+/* Tablet */
+
 @media (max-width: 1024px) {
   /* Container */
   .container {
     padding: 0 3rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.75rem;
+    font-size: 1rem;
   }
 
   /* Header */
