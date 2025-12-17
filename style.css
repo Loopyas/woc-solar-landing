@@ -63,6 +63,21 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
+/*=== Hamburger Menu Styles === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 0.125rem;
+  display: block;
+  transition: 0.3s;
+}
 
 /*Hero Styles*/
 
